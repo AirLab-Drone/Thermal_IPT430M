@@ -10355,3 +10355,104 @@
 [2024-04-01 21:19:45][recv_message 150] login success retcode =  0  , token =  a69c928628ea11b2adf4f81d7874261a  
 [2024-04-01 21:19:45][processHeartbeat 372] processHeartbeat start  
 [2024-04-01 21:20:08][processHeartbeat 393] send heartbeat  
+[2024-04-01 19:38:45][processHeartbeat 417] processHeartbeat end  
+[2024-04-02 10:36:35][start 922] SGP_Login WsClient start   9980  
+[2024-04-02 10:36:35][threadHandleControl 1084] threadHandleControl login start  
+[2024-04-02 10:36:35][login 623] send login  
+[2024-04-02 10:36:35][processControl 1124] processControl start  
+[2024-04-02 10:36:35][recv_message 150] login success retcode =  0  , token =  f6c58906295911b2aa30f81d7874261a  
+[2024-04-02 10:36:35][processHeartbeat 372] processHeartbeat start  
+[2024-04-02 10:36:40][setMotor 5410] setMotor postString:  {
+[2024-04-02 10:36:40]  "action" : "request",
+[2024-04-02 10:36:40]  "cmdtype" : 532,
+[2024-04-02 10:36:40]  "message" : {
+[2024-04-02 10:36:40]    "type" : 5,
+[2024-04-02 10:36:40]    "value" : 0
+[2024-04-02 10:36:40]  },
+[2024-04-02 10:36:40]  "sequence" : 1,
+[2024-04-02 10:36:40]  "token" : "f6c58906295911b2aa30f81d7874261a"
+[2024-04-02 10:36:40]}  
+[2024-04-02 10:36:40][setMotor 5418] setMotor recv:  {"action":"response","cmdtype":532,"message":null,"retcode":0,"retmsg":"success.","sequence":1}  
+[2024-04-02 10:36:46][setMotor 5410] setMotor postString:  {
+[2024-04-02 10:36:46]  "action" : "request",
+[2024-04-02 10:36:46]  "cmdtype" : 532,
+[2024-04-02 10:36:46]  "message" : {
+[2024-04-02 10:36:46]    "type" : 5,
+[2024-04-02 10:36:46]    "value" : 0
+[2024-04-02 10:36:46]  },
+[2024-04-02 10:36:46]  "sequence" : 1,
+[2024-04-02 10:36:46]  "token" : "f6c58906295911b2aa30f81d7874261a"
+[2024-04-02 10:36:46]}  
+[2024-04-02 10:36:46][setMotor 5418] setMotor recv:  {"action":"response","cmdtype":532,"message":null,"retcode":0,"retmsg":"success.","sequence":1}  
+[2024-04-02 10:36:50][setMotor 5410] setMotor postString:  {
+[2024-04-02 10:36:50]  "action" : "request",
+[2024-04-02 10:36:50]  "cmdtype" : 532,
+[2024-04-02 10:36:50]  "message" : {
+[2024-04-02 10:36:50]    "type" : 5,
+[2024-04-02 10:36:50]    "value" : 0
+[2024-04-02 10:36:50]  },
+[2024-04-02 10:36:50]  "sequence" : 1,
+[2024-04-02 10:36:50]  "token" : "f6c58906295911b2aa30f81d7874261a"
+[2024-04-02 10:36:50]}  
+[2024-04-02 10:36:50][setMotor 5418] setMotor recv:  {"action":"response","cmdtype":532,"message":null,"retcode":0,"retmsg":"success.","sequence":1}  
+[2024-04-02 10:36:56][setMotor 5410] setMotor postString:  {
+[2024-04-02 10:36:56]  "action" : "request",
+[2024-04-02 10:36:56]  "cmdtype" : 532,
+[2024-04-02 10:36:56]  "message" : {
+[2024-04-02 10:36:56]    "type" : 5,
+[2024-04-02 10:36:56]    "value" : 0
+[2024-04-02 10:36:56]  },
+[2024-04-02 10:36:56]  "sequence" : 1,
+[2024-04-02 10:36:56]  "token" : "f6c58906295911b2aa30f81d7874261a"
+[2024-04-02 10:36:56]}  
+[2024-04-02 10:36:56][setMotor 5418] setMotor recv:  {"action":"response","cmdtype":532,"message":null,"retcode":0,"retmsg":"success.","sequence":1}  
+[2024-04-02 10:37:00][setMotor 5410] setMotor postString:  {
+[2024-04-02 10:37:00]  "action" : "request",
+[2024-04-02 10:37:00]  "cmdtype" : 532,
+[2024-04-02 10:37:00]  "message" : {
+[2024-04-02 10:37:00]    "type" : 5,
+[2024-04-02 10:37:00]    "value" : 0
+[2024-04-02 10:37:00]  },
+[2024-04-02 10:37:00]  "sequence" : 1,
+[2024-04-02 10:37:00]  "token" : "f6c58906295911b2aa30f81d7874261a"
+[2024-04-02 10:37:00]}  
+[2024-04-02 10:37:00][setMotor 5418] setMotor recv:  {"action":"response","cmdtype":532,"message":null,"retcode":0,"retmsg":"success.","sequence":1}  
+[2024-04-02 10:37:03][setMotor 5410] setMotor postString:  {
+[2024-04-02 10:37:03]  "action" : "request",
+[2024-04-02 10:37:03]  "cmdtype" : 532,
+[2024-04-02 10:37:03]  "message" : {
+[2024-04-02 10:37:03]    "type" : 5,
+[2024-04-02 10:37:03]    "value" : 0
+[2024-04-02 10:37:03]  },
+[2024-04-02 10:37:03]  "sequence" : 1,
+[2024-04-02 10:37:03]  "token" : "f6c58906295911b2aa30f81d7874261a"
+[2024-04-02 10:37:03]}  
+[2024-04-02 10:37:03][setMotor 5418] setMotor recv:  {"action":"response","cmdtype":532,"message":null,"retcode":0,"retmsg":"success.","sequence":1}  
+[2024-04-02 10:37:10][setMotor 5410] setMotor postString:  {
+[2024-04-02 10:37:10]  "action" : "request",
+[2024-04-02 10:37:10]  "cmdtype" : 532,
+[2024-04-02 10:37:10]  "message" : {
+[2024-04-02 10:37:10]    "type" : 5,
+[2024-04-02 10:37:10]    "value" : 0
+[2024-04-02 10:37:10]  },
+[2024-04-02 10:37:10]  "sequence" : 1,
+[2024-04-02 10:37:10]  "token" : "f6c58906295911b2aa30f81d7874261a"
+[2024-04-02 10:37:10]}  
+[2024-04-02 10:37:10][setMotor 5418] setMotor recv:  {"action":"response","cmdtype":532,"message":null,"retcode":0,"retmsg":"success.","sequence":1}  
+[2024-04-02 10:37:21][threadHandle 284] reconvert data again  
+[2024-04-02 10:37:21][processControl 1174] processControl end  
+[2024-04-02 10:38:00][start 922] SGP_Login WsClient start   80  
+[2024-04-02 10:38:00][threadHandleControl 1084] threadHandleControl login start  
+[2024-04-02 10:38:00][login 623] send login  
+[2024-04-02 10:38:00][processControl 1124] processControl start  
+[2024-04-02 10:38:00][recv_message 150] login success retcode =  0  , token =  298d667e295a11b2be60f81d7874261a  
+[2024-04-02 10:38:26][start 922] SGP_Login WsClient start   80  
+[2024-04-02 10:38:26][threadHandleControl 1084] threadHandleControl login start  
+[2024-04-02 10:38:26][login 623] send login  
+[2024-04-02 10:38:26][processControl 1124] processControl start  
+[2024-04-02 10:38:26][recv_message 150] login success retcode =  0  , token =  3940db28295a11b2ad1df81d7874261a  
+[2024-04-08 13:50:52][start 922] SGP_Login WsClient start   80  
+[2024-04-08 13:50:52][threadHandleControl 1084] threadHandleControl login start  
+[2024-04-08 13:50:52][login 623] send login  
+[2024-04-08 13:50:52][processControl 1124] processControl start  
+[2024-04-08 13:50:52][recv_message 150] login success retcode =  0  , token =  0f47b9fa2e2c11b28abdf81d7874261a  

@@ -169,7 +169,7 @@ int main()
             SGP_SetFocus(handle, SGP_FOCUS_AUTO, 0);
         }
 
-        std::cout << thermal_data.TempMatrix[0] << std::endl;
+        std::cout << thermal_data.TempMatrix[SIZE-1] << std::endl;
 
 
 

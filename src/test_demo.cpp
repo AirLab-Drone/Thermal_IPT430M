@@ -5,16 +5,52 @@
 #include <unistd.h>
 #include <string.h>
 
-
 #include <opencv2/opencv.hpp>
-
-
-
 
 // TODO: export LD_LIBRARY_PATH=/home/yuan/thermal_camera/IPT430M/lib:$LD_LIBRARY_PATH
 
+/* ---------------------------------- 函式宣告 ---------------------------------- */
+static void GetIrRtsp(unsigned char *outdata, int w, int h, void *ptr);
+static void GetY16Data(short *y16, int length, void *ptr);
+cv::Mat convertY16ToGray(const short *y16Data);
+cv::Mat convertRGBToMat(const unsigned char *rgbData);
 
+/* ---------------------------------- 熱像儀輸出結構 ---------------------------------- */
+struct ThermalData
+{
+    // 成員變數
+    float *TempMatrix;
+    unsigned char *Thermal_RGB_Image;
+    short *Thermal_Y16_Image;
 
+    // 構造函式
+    ThermalData()
+    {
+        TempMatrix = nullptr;
+        Thermal_RGB_Image = nullptr;
+        Thermal_Y16_Image = nullptr;
+    }
+
+    // 解構函式
+    ~ThermalData()
+    {
+        if (TempMatrix != nullptr)
+        {
+            delete[] TempMatrix;
+            TempMatrix = nullptr;
+        }
+        if (Thermal_RGB_Image != nullptr)
+        {
+            delete[] Thermal_RGB_Image;
+            Thermal_RGB_Image = nullptr;
+        }
+        if (Thermal_Y16_Image != nullptr)
+        {
+            delete[] Thermal_Y16_Image;
+            Thermal_Y16_Image = nullptr;
+        }
+    }
+};
 
 /* ---------------------------------- 設定常量 ---------------------------------- */
 const int WIDTH = 512;
@@ -24,186 +60,173 @@ const char *server = "192.168.1.168";
 const char *username = "admin";
 const char *password = "admin123";
 const int port = 80;
+const int colorbar = 17;
 
+/* ---------------------------------- 全域變數 ---------------------------------- */
+ThermalData thermal_data;
 
-
-
-float * TempMatrix = NULL;
-unsigned char *img = NULL;
-
-
-
-static void GetIrRtsp(unsigned char *outdata, int w, int h, void *ptr);
-cv::Mat convertRGBToMat(const unsigned char *rgbData);
-
-
-
-int main() {
-    const char path[] = "../result/screenpic.jpg";
+int main()
+{
+    int ret = 0;
     SGP_HANDLE handle = 0;
     handle = SGP_InitDevice();
 
+    SGP_GENERAL_INFO info;
+    memset(&info, 0x00, sizeof(info));
 
-    if (handle) {
-        std::cout << "init device success" << std::endl;
-        
-        int ret = SGP_Login(handle, server, username, password, port);
-
-        SGP_GENERAL_INFO info;
-        memset(&info, 0x00, sizeof(info));
-        ret = SGP_GetGeneralInfo(handle,&info);
-
-        if (ret == SGP_OK) {
-            std::cout << "login device success" << std::endl;
-
-
-            if (img == NULL) {
-                img = (unsigned char *)malloc(3 * WIDTH * HEIGHT);
-            }
-
-
-
-            ret = SGP_OpenIrVideo(handle, GetIrRtsp, NULL);
-
-            if (ret == SGP_OK) {
-                
-                std::cout << "OpenIrVideo susss" << std::endl;
-
-
-                while (true) {
-                    cv::Mat out = convertRGBToMat(img);
-
-                    
-                    cv::imshow("Screen Capture", out);
-
-                    int key = cv::waitKey(1);
-                    if (key == 27) { // ESC 鍵的 ASCII 碼為 27
-                        break;
-                    }
-                }
-                free(img);
-                img = NULL;
-            }
-
-
-
-
-            // int height = info.ir_output_h;
-            // int width = info.ir_output_w;
-            // int length = height*width;
-            // int type = 0;
-            // float *output = (float *)calloc(length, sizeof(float));
-
-
-            // // std::cout << "height: " << height << std::endl;
-            // // std::cout << "width: " << width << std::endl;
-            // // std::cout << "length: " << length << std::endl;
-
-            // int input_length = 1024*1024*10;
-            // int output_length = 0;
-            // SGP_IMAGE_TYPE type_1= SGP_IR_IMAGE;
-            // char *input= (char *)calloc(input_length, sizeof(char));
-
-            // if(input!=NULL) {
-            //     ret = SGP_GetScreenCaptureCache(handle, type_1, input, input_length, &output_length);
-    
-            //     // 定义变量用于存储图像二进制数据和大小
-            //     char *image_data; // 图像二进制数据指针
-            //     int image_size = output_length;   // 图像二进制数据大小
-
-            //     // 假设已经调用了 SGP_GetScreenCaptureCache 函数获取图像数据并存储在 image_data 中
-
-            //     // 将图像数据转换为 OpenCV Mat 格式
-            //     // cv::Mat image(cv::Size(width, height), CV_8UC3, image_data);
-
-            //     // // 在 OpenCV 中显示图像
-            //     // cv::imshow("Screen Capture", image);
-            //     // cv::waitKey(0);
-
-            // }
-
-
-            // while(true) {
-
-            //     if(output!=NULL) {
-            //         ret = SGP_GetImageTemps(handle, output, length*4, type);
-
-                
-            //         if (ret == SGP_OK ) {
-
-
-
-            //             std::cout << output[SIZE-1] << std::endl;
-            //         }else {
-
-            //             std::cout << "GetImageTemps error" << std::endl;
-            //         }
-            //     }
-                
-            // }
-            // free(output);
-
-            
-            // 分配空間
-            // if (TempMatrix == NULL) {
-            //     TempMatrix = (float *)malloc(4 * WIDTH * HEIGHT);
-            // }
-
-            // TODO: 測量溫度
-            // while (true) {
-            //     // std::cout << "in loop" << std::endl;
-            //     SGP_GetImageTemps(handle, output, length*4, 1);
-            //     usleep(1000);
-
-            //     std::cout << output[0] << std::endl;
-
-
-            // }
-
-            
-
-        }
-        else {
-            SGP_UnInitDevice(handle);
-            std::cout << "login device error" << std::endl;
-        }
-        // 釋放
-        SGP_UnInitDevice(handle);
-    }
-    else {
-        std::cout << "init device error" << std::endl;
-    }
-
-    if (TempMatrix != NULL)
+    if (!handle)
     {
-        free(TempMatrix);
-        TempMatrix = NULL;
+        std::cerr << "[Error] Init device error" << std::endl;
+        SGP_UnInitDevice(handle);
+        return handle;
+    }
+    std::cout << "[Info] Init device success" << std::endl;
+
+    ret = SGP_Login(handle, server, username, password, port);
+    if (ret != SGP_OK)
+    {
+        std::cerr << "[Error] Login device error" << std::endl;
+        SGP_UnInitDevice(handle);
+        return ret;
+    }
+    std::cout << "[Info] Login device success" << std::endl;
+    ret = SGP_GetGeneralInfo(handle, &info);
+
+    if (SGP_SetColorBarShow(handle, 0))
+    {
+        std::cerr << "[Error] Set Color Bar Show error" << std::endl;
+    }
+    if (SGP_SetColorBar(handle, colorbar))
+    {
+        std::cerr << "[Error] Set Color Bar error" << std::endl;
+    }
+    if (SGP_SetTempShowMode(handle, 8))
+    {
+        std::cerr << "[Error] Set Temp Show Mode error" << std::endl;
+    }
+    
+
+    /* ---------------------------------- 分配空間 ---------------------------------- */
+    if (thermal_data.TempMatrix == nullptr)
+    {
+        thermal_data.TempMatrix = (float *)calloc(SIZE, sizeof(float));
     }
 
-    return 0;
+    if (thermal_data.Thermal_RGB_Image == nullptr)
+    {
+        thermal_data.Thermal_RGB_Image = (unsigned char *)malloc(3 * WIDTH * HEIGHT);
+    }
+
+    if (thermal_data.Thermal_Y16_Image == nullptr)
+    {
+        thermal_data.Thermal_Y16_Image = (short *)malloc(WIDTH * HEIGHT * sizeof(short));
+    }
+
+
+
+    ret = SGP_OpenIrVideo(handle, GetIrRtsp, nullptr);
+    if (ret != SGP_OK)
+    {
+        std::cerr << "[Error] OpenIrVideo error" << std::endl;
+        SGP_Logout(handle);
+        SGP_UnInitDevice(handle);
+        return ret;
+    }
+    std::cout << "[Info] OpenIrVideo susss" << std::endl;
+
+
+    ret = SGP_GetY16(handle, GetY16Data, nullptr);
+    if (ret != SGP_OK)
+    {
+        std::cerr << "[Error] GetY16 error" << std::endl;
+        SGP_Logout(handle);
+        SGP_UnInitDevice(handle);
+        return ret;
+    }
+    std::cout << "[Info] GetY16 susss" << std::endl;
+
+
+
+    while (true)
+    {
+        cv::Mat out = convertRGBToMat(thermal_data.Thermal_RGB_Image);
+        cv::imshow("Screen Capture", out);
+
+        // cv::Mat Y16_img = convertY16ToGray(thermal_data.Thermal_Y16_Image);
+        // cv::imshow("Y16", Y16_img);
+
+        ret = SGP_GetTempMatrixEx(handle, thermal_data.TempMatrix, thermal_data.Thermal_Y16_Image, WIDTH, HEIGHT);
+
+
+        int key = cv::waitKey(1);
+        if (key == 27)
+        { // ESC 鍵的 ASCII 碼為 27
+            break;
+        }
+        if (key == 102 || key == 70)
+        { // F 鍵的 ASCII 碼為 102
+            std::cout << "[Info] AUTO FOCUS" << std::endl;
+            SGP_SetFocus(handle, SGP_FOCUS_AUTO, 0);
+        }
+
+        std::cout << thermal_data.TempMatrix[0] << std::endl;
+
+
+
+        // if (thermal_data.TempMatrix != NULL)
+        // {
+        //     ret = SGP_GetImageTemps(handle, thermal_data.TempMatrix, SIZE * 4, 0);
+        //     if (ret == SGP_OK)
+        //     {
+        //         std::cout << thermal_data.TempMatrix[SIZE - 1] << std::endl;
+        //     }
+        //     else
+        //     {
+        //         // 失败，TODO......
+        //     }
+        // }
+    }
+    // 釋放
+    SGP_Logout(handle);
+    SGP_UnInitDevice(handle);
+    return ret;
+    
 }
-
-
-
 
 static void GetIrRtsp(unsigned char *outdata, int w, int h, void *ptr)
 {
-    if(outdata)
+    if (outdata)
     {
+        // printf("RGB");
         // std::cout << "複製圖片" << std::endl;
-        memcpy(img, outdata, w * h * 3);
+        memcpy(thermal_data.Thermal_RGB_Image, outdata, w * h * 3);
     }
 }
 
+
+static void GetY16Data(short *y16, int length, void *ptr)
+{
+    if (y16)
+    {
+        // printf("y16");
+        memcpy(thermal_data.Thermal_Y16_Image, y16, length * sizeof(short));
+    }
+}
 
 
 cv::Mat convertRGBToMat(const unsigned char *rgbData)
 {
     cv::Mat frameMat(HEIGHT, WIDTH, CV_8UC3);
-
-    // 将 RGB 数据转换为 BGR 格式
     cv::Mat rgbMat(HEIGHT, WIDTH, CV_8UC3, const_cast<unsigned char *>(rgbData));
     cv::cvtColor(rgbMat, frameMat, cv::COLOR_RGB2BGR);
+    return frameMat.clone();
+}
 
-    return frameMat.clone(); // 返回复制的图像以避免内存问题
+
+cv::Mat convertY16ToGray(const short *y16Data)
+{
+    cv::Mat frameMat(HEIGHT, WIDTH, CV_16UC1, const_cast<short *>(y16Data));
+    cv::Mat gray8Bit;
+    frameMat.convertTo(gray8Bit, CV_8U); // Scale to 0-255
+    return gray8Bit;
 }

@@ -146,6 +146,9 @@ private:
             // std::cout << "計算最熱點溫度: " << max_temperature_ << std::endl;
             // std::cout << "================================================" << std::endl;
 
+
+            // TODO:增加request自動對焦
+            
             // Publish pixel values
             auto pixel_msg = std::make_unique<std_msgs::msg::Int32MultiArray>();
             pixel_msg->data = {HotSpot_x, HotSpot_y};

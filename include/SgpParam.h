@@ -82,7 +82,7 @@ struct SGP_RECORD_INFO
 {
         int record_interval;//延时录制时间1-3600秒
         int record_max_size;//录制文件最大大小，单位M，1-1000
-        int record_time;//录制时长，1-3600分钟
+        int record_time;//录制时长，单位分钟，1-60
 };
 
 enum SGP_VIDEO_TYPE

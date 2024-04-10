@@ -7,7 +7,7 @@
 
 #include <opencv2/opencv.hpp>
 
-// TODO: export LD_LIBRARY_PATH=/home/yuan/thermal_camera/IPT430M/lib:$LD_LIBRARY_PATH
+// TODO: export LD_LIBRARY_PATH=/home/yuan/thermal_camera/Thermal_IPT430M/lib:$LD_LIBRARY_PATH
 
 /* ---------------------------------- 函式宣告 ---------------------------------- */
 static void GetIrRtsp(unsigned char *outdata, int w, int h, void *ptr);

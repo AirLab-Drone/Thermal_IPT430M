@@ -72,7 +72,7 @@ SGP_API int SGP_OpenVlVideo(SGP_HANDLE handle, SGP_RTSPCALLBACK callback, void *
 * pUser			输入参数
 * @return       成功返回SGP_OK，失败返回错误码
 */
-SGP_API int SGP_OpenIrVideo(SGP_HANDLE handle, SGP_RTSPCALLBACK callback, void *pUser);
+SGP_API int SGP_OpenIrVideo(SGP_HANDLE handle, SGP_RTSPCALLBACK callback,void *pUser);
 
 /**
 * @brief        关闭可见光视频
@@ -1093,12 +1093,20 @@ SGP_API int SGP_CommandSend(SGP_HANDLE handle, const char* data);
 * @brief        录制带温度信息的文件(调试中，暂时不写入用户手册）
 * @param
 * handle        输入参数，传入设备对象
-* path			输入参数，传入问文件路径
-* state			输入参数，传入录制开始或者停止的状态
 * @return       成功返回SGP_OK，失败返回错误码
 * @note
 */
-SGP_API int SGP_RecordTempInfo(SGP_HANDLE handle, const char* path, const bool state);
+SGP_API int SGP_StartRecordTempInfo(SGP_HANDLE handle);
+
+/**
+* @brief        停止录制带温度信息的文件(调试中，暂时不写入用户手册）
+* @param
+* handle        输入参数，传入设备对象
+* path			输出参数，传出录制的文件路径
+* @return       成功返回SGP_OK，失败返回错误码
+* @note
+*/
+SGP_API int SGP_StopRecordTempInfo(SGP_HANDLE handle, char *path);
 
 /**
 * @brief		透传接口(调试中，暂时不写入用户手册）

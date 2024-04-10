@@ -55,7 +55,7 @@ struct ThermalData
 /* ---------------------------------- 設定常量 ---------------------------------- */
 const int WIDTH = 512;
 const int HEIGHT = 384;
-const int SIZE = WIDTH * HEIGHT; // =196608
+// const int SIZE = WIDTH * HEIGHT; // =196608
 const char *server = "192.168.1.168";
 const char *username = "admin";
 const char *password = "admin123";
@@ -104,25 +104,55 @@ int main()
     {
         std::cerr << "[Error] Set Temp Show Mode error" << std::endl;
     }
-    
+
+    /* --------------------------------- 獲取熱像儀資訊 -------------------------------- */
+    int ir_model_w = info.ir_model_w;   // 红外模组宽
+    int ir_model_h = info.ir_model_h;   // 红外模组高
+    int ir_output_w = info.ir_output_w; // 红外通道输出宽
+    int ir_output_h = info.ir_output_h; // 红外通道输出高
+    int ir_model_size = 0;
+    int ir_output_size = 0;
+    if (ir_model_w && ir_model_h)
+    {
+        ir_model_size = ir_model_w * ir_model_h;
+    }
+    if (ir_output_w && ir_output_h)
+    {
+        ir_output_size = ir_output_w * ir_output_h;
+    }
+    std::cout << "[Info] Infra Model Width: " << ir_model_w << std::endl;    // 384
+    std::cout << "[Info] Infra Model Height: " << ir_model_h << std::endl;   // 288
+    std::cout << "[Info] Infra Model SIZE: " << ir_model_size << std::endl;  //
+    std::cout << "[Info] Infra Output Width: " << ir_output_w << std::endl;  // 512
+    std::cout << "[Info] Infra Output Height: " << ir_output_h << std::endl; // 384
+    std::cout << "[Info] Infra Model SIZE: " << ir_output_size << std::endl; //
+
+    /* ---------------------------------- 定義變數 ---------------------------------- */
+    int IRModelHotSpot_x, IRModelHotSpot_y, IRModelColdSpot_x, IRModelColdSpot_y; // 紅外模組座標
+    int HotSpot_x, HotSpot_y, ColdSpot_x, ColdSpot_y;                             // 輸出圖像座標
+    float HotSpot_temp, ColdSpot_temp;
+    int maxIndex = 0;
+    float maxTemperature = 0.0;
+    float IRModleToRGB_x = static_cast<float>(ir_output_w) / static_cast<float>(ir_model_w);
+    float IRModleToRGB_y = static_cast<float>(ir_output_h) / static_cast<float>(ir_model_h);
+    // std::cout << IRModleToRGB_x << std::endl;
+    // std::cout << IRModleToRGB_y << std::endl;
 
     /* ---------------------------------- 分配空間 ---------------------------------- */
     if (thermal_data.TempMatrix == nullptr)
     {
-        thermal_data.TempMatrix = (float *)calloc(SIZE, sizeof(float));
+        thermal_data.TempMatrix = (float *)calloc(ir_output_size, sizeof(float));
     }
 
     if (thermal_data.Thermal_RGB_Image == nullptr)
     {
-        thermal_data.Thermal_RGB_Image = (unsigned char *)malloc(3 * WIDTH * HEIGHT);
+        thermal_data.Thermal_RGB_Image = (unsigned char *)malloc(3 * ir_output_w * ir_output_h);
     }
 
     if (thermal_data.Thermal_Y16_Image == nullptr)
     {
-        thermal_data.Thermal_Y16_Image = (short *)malloc(WIDTH * HEIGHT * sizeof(short));
+        thermal_data.Thermal_Y16_Image = (short *)malloc(224256 * sizeof(short));
     }
-
-
 
     ret = SGP_OpenIrVideo(handle, GetIrRtsp, nullptr);
     if (ret != SGP_OK)
@@ -134,7 +164,6 @@ int main()
     }
     std::cout << "[Info] OpenIrVideo susss" << std::endl;
 
-
     ret = SGP_GetY16(handle, GetY16Data, nullptr);
     if (ret != SGP_OK)
     {
@@ -145,8 +174,6 @@ int main()
     }
     std::cout << "[Info] GetY16 susss" << std::endl;
 
-
-
     while (true)
     {
         cv::Mat out = convertRGBToMat(thermal_data.Thermal_RGB_Image);
@@ -155,8 +182,36 @@ int main()
         // cv::Mat Y16_img = convertY16ToGray(thermal_data.Thermal_Y16_Image);
         // cv::imshow("Y16", Y16_img);
 
-        ret = SGP_GetTempMatrixEx(handle, thermal_data.TempMatrix, thermal_data.Thermal_Y16_Image, WIDTH, HEIGHT);
+        /* -------------------------- 溫度矩陣是紅外模組的大小 384 * 288 ------------------------- */
+        ret = SGP_GetTempMatrixEx(handle, thermal_data.TempMatrix, thermal_data.Thermal_Y16_Image, ir_model_w, ir_model_h);
 
+        // std::cout << thermal_data.TempMatrix[ir_model_size - 1] << std::endl;
+
+        maxTemperature = thermal_data.TempMatrix[0];
+        for (int i = 0; i < ir_model_size; i++)
+        {
+            if (thermal_data.TempMatrix[i] > maxTemperature)
+            {
+                maxTemperature = thermal_data.TempMatrix[i];
+                maxIndex = i;
+            }
+        }
+        IRModelHotSpot_x = (maxIndex) % ir_model_w + 1;
+        IRModelHotSpot_y = (maxIndex) / ir_model_w + 1;
+
+        HotSpot_x = IRModelHotSpot_x * IRModleToRGB_x;
+        HotSpot_y = IRModelHotSpot_y * IRModleToRGB_y;
+
+        /* -------------------------------------------------------------------------- */
+        /*                               輸出像素的座標, 不是索引值                       */
+        /* -------------------------------------------------------------------------- */
+        std::cout << "================================================" << std::endl;
+        std::cout << "紅外模組熱點x座標: " << IRModelHotSpot_x << std::endl;
+        std::cout << "紅外模組熱點y座標: " << IRModelHotSpot_y << std::endl;
+        std::cout << "計算最熱點x座標: " << HotSpot_x << std::endl;
+        std::cout << "計算最熱點y座標: " << HotSpot_y << std::endl;
+        std::cout << "計算最熱點溫度: " << maxTemperature << std::endl;
+        std::cout << "================================================" << std::endl;
 
         int key = cv::waitKey(1);
         if (key == 27)
@@ -168,29 +223,11 @@ int main()
             std::cout << "[Info] AUTO FOCUS" << std::endl;
             SGP_SetFocus(handle, SGP_FOCUS_AUTO, 0);
         }
-
-        std::cout << thermal_data.TempMatrix[SIZE-1] << std::endl;
-
-
-
-        // if (thermal_data.TempMatrix != NULL)
-        // {
-        //     ret = SGP_GetImageTemps(handle, thermal_data.TempMatrix, SIZE * 4, 0);
-        //     if (ret == SGP_OK)
-        //     {
-        //         std::cout << thermal_data.TempMatrix[SIZE - 1] << std::endl;
-        //     }
-        //     else
-        //     {
-        //         // 失败，TODO......
-        //     }
-        // }
     }
     // 釋放
     SGP_Logout(handle);
     SGP_UnInitDevice(handle);
     return ret;
-    
 }
 
 static void GetIrRtsp(unsigned char *outdata, int w, int h, void *ptr)
@@ -203,16 +240,15 @@ static void GetIrRtsp(unsigned char *outdata, int w, int h, void *ptr)
     }
 }
 
-
 static void GetY16Data(short *y16, int length, void *ptr)
 {
     if (y16)
     {
-        // printf("y16");
+        // TODO:搞清楚length是啥？
+        // std::cout << length << std::endl;    // 224256
         memcpy(thermal_data.Thermal_Y16_Image, y16, length * sizeof(short));
     }
 }
-
 
 cv::Mat convertRGBToMat(const unsigned char *rgbData)
 {
@@ -221,7 +257,6 @@ cv::Mat convertRGBToMat(const unsigned char *rgbData)
     cv::cvtColor(rgbMat, frameMat, cv::COLOR_RGB2BGR);
     return frameMat.clone();
 }
-
 
 cv::Mat convertY16ToGray(const short *y16Data)
 {

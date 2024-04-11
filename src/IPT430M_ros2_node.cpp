@@ -104,9 +104,9 @@ public:
     {
         // publisher_ = this->create_publisher<sensor_msgs::msg::Image>("thermal_image", 10);
 
-        pixel_pub_ = this->create_publisher<std_msgs::msg::Int32MultiArray>("hot_spot_temperature_pos", 10); // temperature position [x, y]
-        image_pub_ = this->create_publisher<sensor_msgs::msg::Image>("thermal_image", 10);                   // thermal rgb img
-        temperature_pub_ = this->create_publisher<std_msgs::msg::Float32>("hot_spot_temperature", 10);       // hot spot temperature
+        pixel_pub_ = this->create_publisher<std_msgs::msg::Int32MultiArray>("hot_spot_temperature_pos", 1); // temperature position [x, y]
+        image_pub_ = this->create_publisher<sensor_msgs::msg::Image>("thermal_image", 1);                   // thermal rgb img
+        temperature_pub_ = this->create_publisher<std_msgs::msg::Float32>("hot_spot_temperature", 1);       // hot spot temperature
 
         timer_ = this->create_wall_timer(std::chrono::milliseconds(1), std::bind(&ThermalCameraNode::publishThermalData, this));
 

@@ -30092,3 +30092,147 @@
 [2024-04-11 16:17:03][SGP_Logout 58] SGP_Logout out  
 [2024-04-11 16:17:03][SGP_UnInitDevice 23] SGP_UnInitDevice in  
 [2024-04-11 16:17:04][SGP_UnInitDevice 30] SGP_UnInitDevice out  
+[2024-04-11 19:54:13][SGP_InitDevice 17] SGP_InitDevice out  
+[2024-04-11 19:54:13][SGP_Login 35] SGP_Login in  
+[2024-04-11 19:54:14][start 973] SGP_Login WsClient start   80  
+[2024-04-11 19:54:14][threadHandleControl 1193] threadHandleControl login start  
+[2024-04-11 19:54:14][login 670] send login  
+[2024-04-11 19:54:14][processControl 1235] processControl start  
+[2024-04-11 19:54:14][recv_message 149] login success retcode =  0  , token =  35cd5c7cf7fa11ee9650f81d7874261a  
+[2024-04-11 19:54:14][SGP_Login 43] SGP_Login out  
+[2024-04-11 19:54:14][processHeartbeat 373] processHeartbeat start  
+[2024-04-11 19:54:14][SGP_GetGeneralInfo 64] SGP_GetGeneralInfo in  
+[2024-04-11 19:54:14][SGP_GetGeneralInfo 72] SGP_GetGeneralInfo out  
+[2024-04-11 19:54:14][SGP_SetColorBar 611] SGP_SetColorBar in  
+[2024-04-11 19:54:14][SGP_SetColorBar 619] SGP_SetColorBar out  
+[2024-04-11 19:54:14][SGP_OpenIrVideo 92] SGP_OpenIrVideo in  
+[2024-04-11 19:54:14][SGP_OpenIrVideo 100] SGP_OpenIrVideo out  
+[2024-04-11 19:54:14][loadItaConf 171] IptTempMeasureITA loadItaConf in  
+[2024-04-11 19:54:14][loadCurveDatas 180] IptTempMeasureITA loadCurveDatas in  
+[2024-04-11 19:54:14][registerITA 270] IptTempMeasureITA registerITA in  
+[2024-04-11 19:54:14][readConfig 25] IptTempMeasureITA readConfig in  
+[2024-04-11 19:54:14][getItaConf 334] IptTempMeasureITA getItaConf in m_pItaConfDataLength  108  
+[2024-04-11 19:54:14][readPackageData 6] IptTempMeasureITA readPackageData in  0  512  
+[2024-04-11 19:54:14][readPackageData 6] IptTempMeasureITA readPackageData in  1616  14  
+[2024-04-11 19:54:14][readPackageData 6] IptTempMeasureITA readPackageData in  1630  18400  
+[2024-04-11 19:54:14][getY16 6099] m_measureManager->startMeausre  
+[2024-04-11 19:54:14][startRequestY16 1024] startRequestY16() in  
+[2024-04-11 19:54:14][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:14][initWsY16 777] initWsY16() in  
+[2024-04-11 19:54:14][initWsY16 789] initWsY16() successfully and out  
+[2024-04-11 19:54:14][startGetY16 711] startGetY16() in  
+[2024-04-11 19:54:14][startGetY16 743] startGetY16() out  
+[2024-04-11 19:54:14][processY16 464] processY16 start  
+[2024-04-11 19:54:14][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:14][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:14][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:15][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:15][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:15][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:15][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:15][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:15][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:15][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:15][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:15][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:15][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:16][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:16][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:16][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:16][getParamLine 1124] ws is waiting for paraline  
+[2024-04-11 19:54:16][readPackageData 6] IptTempMeasureITA readPackageData in  29230  18400  
+[2024-04-11 19:54:33][processControl 1260] NetException:  Timeout  
+[2024-04-11 19:54:33][processControl 1289] processControl end  
+[2024-04-11 19:54:33][threadHandleControl 1198] threadHandleControl reacquireY16 start  
+[2024-04-11 19:54:33][reacquireY16 1170] reacquireY16() in  
+[2024-04-11 19:54:33][reacquireY16 1176] Try to get y16 data again  
+[2024-04-11 19:54:33][stopGetY16Data 1043] stopGetY16Data() in  
+[2024-04-11 19:54:33][stopGetY16Data 1062] stopGetY16Data() out  
+[2024-04-11 19:54:33][processY16 609] processY16 end  
+[2024-04-11 19:54:34][startRequestY16 1024] startRequestY16() in  
+[2024-04-11 19:54:34][reacquireY16 1186] reacquireY16() out  
+[2024-04-11 19:54:34][initWsY16 777] initWsY16() in  
+[2024-04-11 19:54:34][initWsY16 789] initWsY16() successfully and out  
+[2024-04-11 19:54:34][startGetY16 711] startGetY16() in  
+[2024-04-11 19:54:34][startGetY16 743] startGetY16() out  
+[2024-04-11 19:54:34][processY16 464] processY16 start  
+[2024-04-11 19:54:34][threadHandleControl 1193] threadHandleControl login start  
+[2024-04-11 19:54:34][login 670] send login  
+[2024-04-11 19:54:34][processControl 1235] processControl start  
+[2024-04-11 19:54:34][recv_message 149] login success retcode =  0  , token =  41ca00acf7fa11eebad6f81d7874261a  
+[2024-04-11 19:54:45][processHeartbeat 392] send heartbeat  
+[2024-04-11 19:55:02][processControl 1260] NetException:  Timeout  
+[2024-04-11 19:55:02][processControl 1289] processControl end  
+[2024-04-11 19:55:02][threadHandleControl 1198] threadHandleControl reacquireY16 start  
+[2024-04-11 19:55:02][reacquireY16 1170] reacquireY16() in  
+[2024-04-11 19:55:02][reacquireY16 1176] Try to get y16 data again  
+[2024-04-11 19:55:02][stopGetY16Data 1043] stopGetY16Data() in  
+[2024-04-11 19:55:02][stopGetY16Data 1062] stopGetY16Data() out  
+[2024-04-11 19:55:02][processY16 609] processY16 end  
+[2024-04-11 19:55:03][startRequestY16 1024] startRequestY16() in  
+[2024-04-11 19:55:03][reacquireY16 1186] reacquireY16() out  
+[2024-04-11 19:55:03][initWsY16 777] initWsY16() in  
+[2024-04-11 19:55:03][initWsY16 789] initWsY16() successfully and out  
+[2024-04-11 19:55:03][startGetY16 711] startGetY16() in  
+[2024-04-11 19:55:03][startGetY16 743] startGetY16() out  
+[2024-04-11 19:55:03][processY16 464] processY16 start  
+[2024-04-11 19:55:03][threadHandleControl 1193] threadHandleControl login start  
+[2024-04-11 19:55:03][login 670] send login  
+[2024-04-11 19:55:03][processControl 1235] processControl start  
+[2024-04-11 19:55:03][recv_message 149] login success retcode =  0  , token =  532444def7fa11ee8527f81d7874261a  
+[2024-04-11 19:55:16][processHeartbeat 392] send heartbeat  
+[2024-04-11 19:55:33][processControl 1260] NetException:  Timeout  
+[2024-04-11 19:55:33][processControl 1289] processControl end  
+[2024-04-11 19:55:33][threadHandleControl 1198] threadHandleControl reacquireY16 start  
+[2024-04-11 19:55:33][reacquireY16 1170] reacquireY16() in  
+[2024-04-11 19:55:33][reacquireY16 1176] Try to get y16 data again  
+[2024-04-11 19:55:33][stopGetY16Data 1043] stopGetY16Data() in  
+[2024-04-11 19:55:33][stopGetY16Data 1062] stopGetY16Data() out  
+[2024-04-11 19:55:33][processY16 609] processY16 end  
+[2024-04-11 19:55:34][startRequestY16 1024] startRequestY16() in  
+[2024-04-11 19:55:34][reacquireY16 1186] reacquireY16() out  
+[2024-04-11 19:55:34][initWsY16 777] initWsY16() in  
+[2024-04-11 19:55:34][initWsY16 789] initWsY16() successfully and out  
+[2024-04-11 19:55:34][startGetY16 711] startGetY16() in  
+[2024-04-11 19:55:34][startGetY16 743] startGetY16() out  
+[2024-04-11 19:55:34][processY16 464] processY16 start  
+[2024-04-11 19:55:34][threadHandleControl 1193] threadHandleControl login start  
+[2024-04-11 19:55:34][login 670] send login  
+[2024-04-11 19:55:34][processControl 1235] processControl start  
+[2024-04-11 19:55:34][recv_message 149] login success retcode =  0  , token =  658d7e6af7fa11ee9ba2f81d7874261a  
+[2024-04-11 19:55:47][processHeartbeat 392] send heartbeat  
+[2024-04-11 19:56:03][processControl 1260] NetException:  Timeout  
+[2024-04-11 19:56:03][processControl 1289] processControl end  
+[2024-04-11 19:56:03][threadHandleControl 1198] threadHandleControl reacquireY16 start  
+[2024-04-11 19:56:03][reacquireY16 1170] reacquireY16() in  
+[2024-04-11 19:56:03][reacquireY16 1176] Try to get y16 data again  
+[2024-04-11 19:56:03][stopGetY16Data 1043] stopGetY16Data() in  
+[2024-04-11 19:56:03][stopGetY16Data 1062] stopGetY16Data() out  
+[2024-04-11 19:56:03][processY16 609] processY16 end  
+[2024-04-11 19:56:04][startRequestY16 1024] startRequestY16() in  
+[2024-04-11 19:56:04][reacquireY16 1186] reacquireY16() out  
+[2024-04-11 19:56:04][initWsY16 777] initWsY16() in  
+[2024-04-11 19:56:04][initWsY16 789] initWsY16() successfully and out  
+[2024-04-11 19:56:04][startGetY16 711] startGetY16() in  
+[2024-04-11 19:56:04][startGetY16 743] startGetY16() out  
+[2024-04-11 19:56:04][processY16 464] processY16 start  
+[2024-04-11 19:56:04][threadHandleControl 1193] threadHandleControl login start  
+[2024-04-11 19:56:04][login 670] send login  
+[2024-04-11 19:56:04][processControl 1235] processControl start  
+[2024-04-11 19:56:04][recv_message 149] login success retcode =  0  , token =  7773f7a8f7fa11ee8786f81d7874261a  
+[2024-04-11 19:56:09][SGP_Logout 50] SGP_Logout in  
+[2024-04-11 19:56:09][threadHandle 284] reconvert data again  
+[2024-04-11 19:56:09][processY16 609] processY16 end  
+[2024-04-11 19:56:09][processControl 1289] processControl end  
+[2024-04-11 19:56:09][threadHandleControl 1198] threadHandleControl reacquireY16 start  
+[2024-04-11 19:56:09][reacquireY16 1170] reacquireY16() in  
+[2024-04-11 19:56:09][reacquireY16 1176] Try to get y16 data again  
+[2024-04-11 19:56:09][stopGetY16Data 1043] stopGetY16Data() in  
+[2024-04-11 19:56:09][stopGetY16Data 1062] stopGetY16Data() out  
+[2024-04-11 19:56:09][processHeartbeat 412] processHeartbeat end  
+[2024-04-11 19:56:10][startRequestY16 1024] startRequestY16() in  
+[2024-04-11 19:56:10][startRequestY16 1037] startRequestY16() out  
+[2024-04-11 19:56:10][reacquireY16 1186] reacquireY16() out  
+[2024-04-11 19:56:10][SGP_Logout 58] SGP_Logout out  
+[2024-04-11 19:56:10][SGP_UnInitDevice 23] SGP_UnInitDevice in  
+[2024-04-11 19:56:11][SGP_UnInitDevice 30] SGP_UnInitDevice out  

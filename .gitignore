@@ -1,4 +1,5 @@
 !build/.gitkeep
 build/*
 *.vscode
+*.log
 lib/sgp_sdk.log

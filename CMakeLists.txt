@@ -74,4 +74,3 @@ target_link_libraries(test_thermal_node
 )
 
 
-

@@ -30339,3 +30339,509 @@
 [2024-04-11 19:58:06][SGP_Logout 58] SGP_Logout out  
 [2024-04-11 19:58:06][SGP_UnInitDevice 23] SGP_UnInitDevice in  
 [2024-04-11 19:58:07][SGP_UnInitDevice 30] SGP_UnInitDevice out  
+[2024-04-15 18:23:55][SGP_InitDevice 17] SGP_InitDevice out  
+[2024-04-15 18:23:55][SGP_Login 35] SGP_Login in  
+[2024-04-15 18:23:55][start 973] SGP_Login WsClient start   80  
+[2024-04-15 18:23:55][threadHandleControl 1193] threadHandleControl login start  
+[2024-04-15 18:23:55][login 670] send login  
+[2024-04-15 18:23:55][processControl 1235] processControl start  
+[2024-04-15 18:23:55][recv_message 149] login success retcode =  0  , token =  5a5a1a741dd211b284801efd6442181a  
+[2024-04-15 18:23:55][SGP_Login 43] SGP_Login out  
+[2024-04-15 18:23:55][SGP_GetGeneralInfo 64] SGP_GetGeneralInfo in  
+[2024-04-15 18:23:55][processHeartbeat 373] processHeartbeat start  
+[2024-04-15 18:23:55][SGP_GetGeneralInfo 72] SGP_GetGeneralInfo out  
+[2024-04-15 18:23:56][SGP_SetColorBar 611] SGP_SetColorBar in  
+[2024-04-15 18:23:56][SGP_SetColorBar 619] SGP_SetColorBar out  
+[2024-04-15 18:23:56][SGP_OpenIrVideo 92] SGP_OpenIrVideo in  
+[2024-04-15 18:23:56][SGP_OpenIrVideo 100] SGP_OpenIrVideo out  
+[2024-04-15 18:23:56][loadItaConf 171] IptTempMeasureITA loadItaConf in  
+[2024-04-15 18:23:56][loadCurveDatas 180] IptTempMeasureITA loadCurveDatas in  
+[2024-04-15 18:23:56][registerITA 270] IptTempMeasureITA registerITA in  
+[2024-04-15 18:23:56][readConfig 25] IptTempMeasureITA readConfig in  
+[2024-04-15 18:23:56][getItaConf 334] IptTempMeasureITA getItaConf in m_pItaConfDataLength  108  
+[2024-04-15 18:23:56][readPackageData 6] IptTempMeasureITA readPackageData in  0  512  
+[2024-04-15 18:23:56][readPackageData 6] IptTempMeasureITA readPackageData in  1616  14  
+[2024-04-15 18:23:56][readPackageData 6] IptTempMeasureITA readPackageData in  1630  18400  
+[2024-04-15 18:23:56][getY16 6099] m_measureManager->startMeausre  
+[2024-04-15 18:23:56][startRequestY16 1024] startRequestY16() in  
+[2024-04-15 18:23:56][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:56][initWsY16 777] initWsY16() in  
+[2024-04-15 18:23:56][initWsY16 789] initWsY16() successfully and out  
+[2024-04-15 18:23:56][startGetY16 711] startGetY16() in  
+[2024-04-15 18:23:56][startGetY16 743] startGetY16() out  
+[2024-04-15 18:23:56][processY16 464] processY16 start  
+[2024-04-15 18:23:56][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:56][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:56][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:56][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:56][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:57][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:57][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:57][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:57][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:57][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:57][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:57][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:57][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:57][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:57][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:58][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:58][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:58][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:58][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:23:58][readPackageData 6] IptTempMeasureITA readPackageData in  20030  18400  
+[2024-04-15 18:24:02][SGP_Logout 50] SGP_Logout in  
+[2024-04-15 18:24:02][threadHandle 284] reconvert data again  
+[2024-04-15 18:24:02][processY16 609] processY16 end  
+[2024-04-15 18:24:02][processHeartbeat 412] processHeartbeat end  
+[2024-04-15 18:24:02][processControl 1289] processControl end  
+[2024-04-15 18:24:02][threadHandleControl 1198] threadHandleControl reacquireY16 start  
+[2024-04-15 18:24:02][reacquireY16 1170] reacquireY16() in  
+[2024-04-15 18:24:02][reacquireY16 1176] Try to get y16 data again  
+[2024-04-15 18:24:02][stopGetY16Data 1043] stopGetY16Data() in  
+[2024-04-15 18:24:02][stopGetY16Data 1062] stopGetY16Data() out  
+[2024-04-15 18:24:02][startRequestY16 1024] startRequestY16() in  
+[2024-04-15 18:24:02][startRequestY16 1037] startRequestY16() out  
+[2024-04-15 18:24:02][reacquireY16 1186] reacquireY16() out  
+[2024-04-15 18:24:03][SGP_Logout 58] SGP_Logout out  
+[2024-04-15 18:24:03][SGP_UnInitDevice 23] SGP_UnInitDevice in  
+[2024-04-15 18:24:04][SGP_UnInitDevice 30] SGP_UnInitDevice out  
+[2024-04-15 18:24:53][SGP_InitDevice 17] SGP_InitDevice out  
+[2024-04-15 18:24:53][SGP_Login 35] SGP_Login in  
+[2024-04-15 18:24:53][start 973] SGP_Login WsClient start   80  
+[2024-04-15 18:24:53][threadHandleControl 1193] threadHandleControl login start  
+[2024-04-15 18:24:53][login 670] send login  
+[2024-04-15 18:24:53][processControl 1235] processControl start  
+[2024-04-15 18:24:53][recv_message 149] login success retcode =  0  , token =  7c7bbe3c1dd211b2b30a1efd6442181a  
+[2024-04-15 18:24:53][SGP_Login 43] SGP_Login out  
+[2024-04-15 18:24:53][SGP_GetGeneralInfo 64] SGP_GetGeneralInfo in  
+[2024-04-15 18:24:53][processHeartbeat 373] processHeartbeat start  
+[2024-04-15 18:24:53][SGP_GetGeneralInfo 72] SGP_GetGeneralInfo out  
+[2024-04-15 18:24:53][SGP_SetColorBar 611] SGP_SetColorBar in  
+[2024-04-15 18:24:53][SGP_SetColorBar 619] SGP_SetColorBar out  
+[2024-04-15 18:24:53][SGP_OpenIrVideo 92] SGP_OpenIrVideo in  
+[2024-04-15 18:24:53][SGP_OpenIrVideo 100] SGP_OpenIrVideo out  
+[2024-04-15 18:24:53][loadItaConf 171] IptTempMeasureITA loadItaConf in  
+[2024-04-15 18:24:53][loadCurveDatas 180] IptTempMeasureITA loadCurveDatas in  
+[2024-04-15 18:24:53][registerITA 270] IptTempMeasureITA registerITA in  
+[2024-04-15 18:24:53][readConfig 25] IptTempMeasureITA readConfig in  
+[2024-04-15 18:24:53][getItaConf 334] IptTempMeasureITA getItaConf in m_pItaConfDataLength  108  
+[2024-04-15 18:24:53][readPackageData 6] IptTempMeasureITA readPackageData in  0  512  
+[2024-04-15 18:24:53][readPackageData 6] IptTempMeasureITA readPackageData in  1616  14  
+[2024-04-15 18:24:53][readPackageData 6] IptTempMeasureITA readPackageData in  1630  18400  
+[2024-04-15 18:24:53][getY16 6099] m_measureManager->startMeausre  
+[2024-04-15 18:24:53][startRequestY16 1024] startRequestY16() in  
+[2024-04-15 18:24:53][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:53][initWsY16 777] initWsY16() in  
+[2024-04-15 18:24:53][initWsY16 789] initWsY16() successfully and out  
+[2024-04-15 18:24:53][startGetY16 711] startGetY16() in  
+[2024-04-15 18:24:53][startGetY16 743] startGetY16() out  
+[2024-04-15 18:24:53][processY16 464] processY16 start  
+[2024-04-15 18:24:53][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:53][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:53][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:54][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:54][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:54][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:54][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:54][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:54][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:54][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:54][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:54][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:54][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:55][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:55][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:55][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:55][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 18:24:55][readPackageData 6] IptTempMeasureITA readPackageData in  20030  18400  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:01][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:02][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:02][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:02][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:02][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:02][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:02][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:02][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:02][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:02][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:02][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:02][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:02][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:02][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:02][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:02][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:12][processControl 1260] NetException:  Timeout  
+[2024-04-15 18:25:12][processControl 1289] processControl end  
+[2024-04-15 18:25:12][threadHandleControl 1198] threadHandleControl reacquireY16 start  
+[2024-04-15 18:25:12][reacquireY16 1170] reacquireY16() in  
+[2024-04-15 18:25:12][reacquireY16 1176] Try to get y16 data again  
+[2024-04-15 18:25:12][stopGetY16Data 1043] stopGetY16Data() in  
+[2024-04-15 18:25:12][stopGetY16Data 1062] stopGetY16Data() out  
+[2024-04-15 18:25:12][processY16 609] processY16 end  
+[2024-04-15 18:25:13][startRequestY16 1024] startRequestY16() in  
+[2024-04-15 18:25:13][reacquireY16 1186] reacquireY16() out  
+[2024-04-15 18:25:13][initWsY16 777] initWsY16() in  
+[2024-04-15 18:25:13][initWsY16 789] initWsY16() successfully and out  
+[2024-04-15 18:25:13][startGetY16 711] startGetY16() in  
+[2024-04-15 18:25:13][startGetY16 743] startGetY16() out  
+[2024-04-15 18:25:13][processY16 464] processY16 start  
+[2024-04-15 18:25:13][threadHandleControl 1193] threadHandleControl login start  
+[2024-04-15 18:25:13][login 670] send login  
+[2024-04-15 18:25:13][processControl 1235] processControl start  
+[2024-04-15 18:25:13][recv_message 149] login success retcode =  0  , token =  887b64801dd211b2a3841efd6442181a  
+[2024-04-15 18:25:24][processHeartbeat 392] send heartbeat  
+[2024-04-15 18:25:36][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:36][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:36][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:36][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:36][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:36][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:36][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:36][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:36][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:36][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:25:41][processControl 1260] NetException:  Timeout  
+[2024-04-15 18:25:41][processControl 1289] processControl end  
+[2024-04-15 18:25:41][threadHandleControl 1198] threadHandleControl reacquireY16 start  
+[2024-04-15 18:25:41][reacquireY16 1170] reacquireY16() in  
+[2024-04-15 18:25:41][reacquireY16 1176] Try to get y16 data again  
+[2024-04-15 18:25:41][stopGetY16Data 1043] stopGetY16Data() in  
+[2024-04-15 18:25:41][stopGetY16Data 1062] stopGetY16Data() out  
+[2024-04-15 18:25:41][processY16 609] processY16 end  
+[2024-04-15 18:25:41][startRequestY16 1024] startRequestY16() in  
+[2024-04-15 18:25:41][reacquireY16 1186] reacquireY16() out  
+[2024-04-15 18:25:41][initWsY16 777] initWsY16() in  
+[2024-04-15 18:25:41][initWsY16 789] initWsY16() successfully and out  
+[2024-04-15 18:25:41][startGetY16 711] startGetY16() in  
+[2024-04-15 18:25:41][startGetY16 743] startGetY16() out  
+[2024-04-15 18:25:41][processY16 464] processY16 start  
+[2024-04-15 18:25:42][threadHandleControl 1193] threadHandleControl login start  
+[2024-04-15 18:25:42][login 670] send login  
+[2024-04-15 18:25:42][processControl 1235] processControl start  
+[2024-04-15 18:25:42][recv_message 149] login success retcode =  0  , token =  99a7eff81dd211b29aa71efd6442181a  
+[2024-04-15 18:25:55][processHeartbeat 392] send heartbeat  
+[2024-04-15 18:26:12][processControl 1260] NetException:  Timeout  
+[2024-04-15 18:26:12][processControl 1289] processControl end  
+[2024-04-15 18:26:12][threadHandleControl 1198] threadHandleControl reacquireY16 start  
+[2024-04-15 18:26:12][reacquireY16 1170] reacquireY16() in  
+[2024-04-15 18:26:12][reacquireY16 1176] Try to get y16 data again  
+[2024-04-15 18:26:12][stopGetY16Data 1043] stopGetY16Data() in  
+[2024-04-15 18:26:12][stopGetY16Data 1062] stopGetY16Data() out  
+[2024-04-15 18:26:12][processY16 609] processY16 end  
+[2024-04-15 18:26:13][startRequestY16 1024] startRequestY16() in  
+[2024-04-15 18:26:13][reacquireY16 1186] reacquireY16() out  
+[2024-04-15 18:26:13][initWsY16 777] initWsY16() in  
+[2024-04-15 18:26:13][initWsY16 789] initWsY16() successfully and out  
+[2024-04-15 18:26:13][startGetY16 711] startGetY16() in  
+[2024-04-15 18:26:13][startGetY16 743] startGetY16() out  
+[2024-04-15 18:26:13][processY16 464] processY16 start  
+[2024-04-15 18:26:13][threadHandleControl 1193] threadHandleControl login start  
+[2024-04-15 18:26:13][login 670] send login  
+[2024-04-15 18:26:13][processControl 1235] processControl start  
+[2024-04-15 18:26:13][recv_message 149] login success retcode =  0  , token =  ac2d91641dd211b2b5c01efd6442181a  
+[2024-04-15 18:26:14][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:14][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:14][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:14][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:14][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:14][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:14][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:14][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:15][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:26][processHeartbeat 392] send heartbeat  
+[2024-04-15 18:26:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:37][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:38][parsePramaLine 923] parsePramaLine shutter now  
+[2024-04-15 18:26:44][processControl 1260] NetException:  Timeout  
+[2024-04-15 18:26:44][processControl 1289] processControl end  
+[2024-04-15 18:26:44][threadHandleControl 1198] threadHandleControl reacquireY16 start  
+[2024-04-15 18:26:44][reacquireY16 1170] reacquireY16() in  
+[2024-04-15 18:26:44][reacquireY16 1176] Try to get y16 data again  
+[2024-04-15 18:26:44][stopGetY16Data 1043] stopGetY16Data() in  
+[2024-04-15 18:26:44][stopGetY16Data 1062] stopGetY16Data() out  
+[2024-04-15 18:26:44][processY16 609] processY16 end  
+[2024-04-15 18:26:44][startRequestY16 1024] startRequestY16() in  
+[2024-04-15 18:26:44][reacquireY16 1186] reacquireY16() out  
+[2024-04-15 18:26:44][initWsY16 777] initWsY16() in  
+[2024-04-15 18:26:45][initWsY16 789] initWsY16() successfully and out  
+[2024-04-15 18:26:45][startGetY16 711] startGetY16() in  
+[2024-04-15 18:26:45][startGetY16 743] startGetY16() out  
+[2024-04-15 18:26:45][processY16 464] processY16 start  
+[2024-04-15 18:26:45][threadHandleControl 1193] threadHandleControl login start  
+[2024-04-15 18:26:45][login 670] send login  
+[2024-04-15 18:26:45][processControl 1235] processControl start  
+[2024-04-15 18:26:45][recv_message 149] login success retcode =  0  , token =  bf3801d61dd211b2a4e31efd6442181a  
+[2024-04-15 18:26:57][processHeartbeat 392] send heartbeat  
+[2024-04-15 18:27:14][processControl 1260] NetException:  Timeout  
+[2024-04-15 18:27:14][processControl 1289] processControl end  
+[2024-04-15 18:27:14][threadHandleControl 1198] threadHandleControl reacquireY16 start  
+[2024-04-15 18:27:14][reacquireY16 1170] reacquireY16() in  
+[2024-04-15 18:27:14][reacquireY16 1176] Try to get y16 data again  
+[2024-04-15 18:27:14][stopGetY16Data 1043] stopGetY16Data() in  
+[2024-04-15 18:27:14][stopGetY16Data 1062] stopGetY16Data() out  
+[2024-04-15 18:27:14][processY16 609] processY16 end  
+[2024-04-15 18:27:14][SGP_Logout 50] SGP_Logout in  
+[2024-04-15 18:27:14][threadHandle 284] reconvert data again  
+[2024-04-15 18:27:14][processHeartbeat 412] processHeartbeat end  
+[2024-04-15 18:27:15][startRequestY16 1024] startRequestY16() in  
+[2024-04-15 18:27:15][startRequestY16 1037] startRequestY16() out  
+[2024-04-15 18:27:15][reacquireY16 1186] reacquireY16() out  
+[2024-04-15 18:27:15][SGP_Logout 58] SGP_Logout out  
+[2024-04-15 18:27:15][SGP_UnInitDevice 23] SGP_UnInitDevice in  
+[2024-04-15 18:27:16][SGP_UnInitDevice 30] SGP_UnInitDevice out  
+[2024-04-15 20:53:03][SGP_InitDevice 17] SGP_InitDevice out  
+[2024-04-15 20:53:03][SGP_Login 35] SGP_Login in  
+[2024-04-15 20:53:03][start 973] SGP_Login WsClient start   80  
+[2024-04-15 20:53:03][threadHandleControl 1193] threadHandleControl login start  
+[2024-04-15 20:53:03][login 670] send login  
+[2024-04-15 20:53:03][processControl 1235] processControl start  
+[2024-04-15 20:53:03][recv_message 149] login success retcode =  0  , token =  2f4155b81de711b289ee1efd6442181a  
+[2024-04-15 20:53:03][SGP_Login 43] SGP_Login out  
+[2024-04-15 20:53:03][SGP_GetGeneralInfo 64] SGP_GetGeneralInfo in  
+[2024-04-15 20:53:03][processHeartbeat 373] processHeartbeat start  
+[2024-04-15 20:53:03][SGP_GetGeneralInfo 72] SGP_GetGeneralInfo out  
+[2024-04-15 20:53:03][SGP_SetColorBar 611] SGP_SetColorBar in  
+[2024-04-15 20:53:03][SGP_SetColorBar 619] SGP_SetColorBar out  
+[2024-04-15 20:53:03][SGP_OpenIrVideo 92] SGP_OpenIrVideo in  
+[2024-04-15 20:53:03][SGP_OpenIrVideo 100] SGP_OpenIrVideo out  
+[2024-04-15 20:53:03][loadItaConf 171] IptTempMeasureITA loadItaConf in  
+[2024-04-15 20:53:03][loadCurveDatas 180] IptTempMeasureITA loadCurveDatas in  
+[2024-04-15 20:53:03][registerITA 270] IptTempMeasureITA registerITA in  
+[2024-04-15 20:53:03][readConfig 25] IptTempMeasureITA readConfig in  
+[2024-04-15 20:53:03][getItaConf 334] IptTempMeasureITA getItaConf in m_pItaConfDataLength  108  
+[2024-04-15 20:53:03][readPackageData 6] IptTempMeasureITA readPackageData in  0  512  
+[2024-04-15 20:53:03][readPackageData 6] IptTempMeasureITA readPackageData in  1616  14  
+[2024-04-15 20:53:03][readPackageData 6] IptTempMeasureITA readPackageData in  1630  18400  
+[2024-04-15 20:53:03][getY16 6099] m_measureManager->startMeausre  
+[2024-04-15 20:53:03][startRequestY16 1024] startRequestY16() in  
+[2024-04-15 20:53:03][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:03][initWsY16 777] initWsY16() in  
+[2024-04-15 20:53:03][initWsY16 789] initWsY16() successfully and out  
+[2024-04-15 20:53:03][startGetY16 711] startGetY16() in  
+[2024-04-15 20:53:03][startGetY16 743] startGetY16() out  
+[2024-04-15 20:53:03][processY16 464] processY16 start  
+[2024-04-15 20:53:03][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:04][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:04][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:04][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:04][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:04][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:04][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:04][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:04][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:04][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:04][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:05][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:05][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:05][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:05][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:05][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:05][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:05][SGP_Logout 50] SGP_Logout in  
+[2024-04-15 20:53:05][readPackageData 6] IptTempMeasureITA readPackageData in  38430  18400  
+[2024-04-15 20:53:05][threadHandle 284] reconvert data again  
+[2024-04-15 20:53:05][processY16 609] processY16 end  
+[2024-04-15 20:53:05][processHeartbeat 412] processHeartbeat end  
+[2024-04-15 20:53:05][processControl 1289] processControl end  
+[2024-04-15 20:53:05][threadHandleControl 1198] threadHandleControl reacquireY16 start  
+[2024-04-15 20:53:05][reacquireY16 1170] reacquireY16() in  
+[2024-04-15 20:53:05][reacquireY16 1176] Try to get y16 data again  
+[2024-04-15 20:53:05][stopGetY16Data 1043] stopGetY16Data() in  
+[2024-04-15 20:53:05][stopGetY16Data 1062] stopGetY16Data() out  
+[2024-04-15 20:53:06][startRequestY16 1024] startRequestY16() in  
+[2024-04-15 20:53:06][startRequestY16 1037] startRequestY16() out  
+[2024-04-15 20:53:06][reacquireY16 1186] reacquireY16() out  
+[2024-04-15 20:53:06][SGP_Logout 58] SGP_Logout out  
+[2024-04-15 20:53:06][SGP_UnInitDevice 23] SGP_UnInitDevice in  
+[2024-04-15 20:53:07][SGP_UnInitDevice 30] SGP_UnInitDevice out  
+[2024-04-15 20:53:30][SGP_InitDevice 17] SGP_InitDevice out  
+[2024-04-15 20:53:30][SGP_Login 35] SGP_Login in  
+[2024-04-15 20:53:30][start 973] SGP_Login WsClient start   80  
+[2024-04-15 20:53:30][threadHandleControl 1193] threadHandleControl login start  
+[2024-04-15 20:53:30][login 670] send login  
+[2024-04-15 20:53:30][processControl 1235] processControl start  
+[2024-04-15 20:53:30][recv_message 149] login success retcode =  0  , token =  3f5740661de711b2a10c1efd6442181a  
+[2024-04-15 20:53:30][SGP_Login 43] SGP_Login out  
+[2024-04-15 20:53:30][SGP_GetGeneralInfo 64] SGP_GetGeneralInfo in  
+[2024-04-15 20:53:30][processHeartbeat 373] processHeartbeat start  
+[2024-04-15 20:53:30][SGP_GetGeneralInfo 72] SGP_GetGeneralInfo out  
+[2024-04-15 20:53:30][SGP_SetColorBar 611] SGP_SetColorBar in  
+[2024-04-15 20:53:30][SGP_SetColorBar 619] SGP_SetColorBar out  
+[2024-04-15 20:53:30][SGP_OpenIrVideo 92] SGP_OpenIrVideo in  
+[2024-04-15 20:53:30][SGP_OpenIrVideo 100] SGP_OpenIrVideo out  
+[2024-04-15 20:53:30][loadItaConf 171] IptTempMeasureITA loadItaConf in  
+[2024-04-15 20:53:30][loadCurveDatas 180] IptTempMeasureITA loadCurveDatas in  
+[2024-04-15 20:53:30][registerITA 270] IptTempMeasureITA registerITA in  
+[2024-04-15 20:53:30][readConfig 25] IptTempMeasureITA readConfig in  
+[2024-04-15 20:53:30][getItaConf 334] IptTempMeasureITA getItaConf in m_pItaConfDataLength  108  
+[2024-04-15 20:53:30][readPackageData 6] IptTempMeasureITA readPackageData in  0  512  
+[2024-04-15 20:53:30][readPackageData 6] IptTempMeasureITA readPackageData in  1616  14  
+[2024-04-15 20:53:30][readPackageData 6] IptTempMeasureITA readPackageData in  1630  18400  
+[2024-04-15 20:53:30][getY16 6099] m_measureManager->startMeausre  
+[2024-04-15 20:53:30][startRequestY16 1024] startRequestY16() in  
+[2024-04-15 20:53:30][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:30][initWsY16 777] initWsY16() in  
+[2024-04-15 20:53:30][initWsY16 789] initWsY16() successfully and out  
+[2024-04-15 20:53:30][startGetY16 711] startGetY16() in  
+[2024-04-15 20:53:30][startGetY16 743] startGetY16() out  
+[2024-04-15 20:53:30][processY16 464] processY16 start  
+[2024-04-15 20:53:30][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:30][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:31][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:31][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:31][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:31][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:31][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:31][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:31][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:31][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:31][SGP_Logout 50] SGP_Logout in  
+[2024-04-15 20:53:31][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:31][threadHandle 284] reconvert data again  
+[2024-04-15 20:53:31][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:32][processControl 1289] processControl end  
+[2024-04-15 20:53:32][threadHandleControl 1198] threadHandleControl reacquireY16 start  
+[2024-04-15 20:53:32][reacquireY16 1170] reacquireY16() in  
+[2024-04-15 20:53:32][reacquireY16 1176] Try to get y16 data again  
+[2024-04-15 20:53:32][stopGetY16Data 1043] stopGetY16Data() in  
+[2024-04-15 20:53:32][stopGetY16Data 1062] stopGetY16Data() out  
+[2024-04-15 20:53:32][processY16 609] processY16 end  
+[2024-04-15 20:53:32][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:32][processHeartbeat 412] processHeartbeat end  
+[2024-04-15 20:53:32][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:32][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:32][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:32][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:32][startRequestY16 1024] startRequestY16() in  
+[2024-04-15 20:53:32][startRequestY16 1037] startRequestY16() out  
+[2024-04-15 20:53:32][reacquireY16 1186] reacquireY16() out  
+[2024-04-15 20:53:32][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:32][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:32][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:32][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:32][getParamLine 1124] ws is waiting for paraline  
+[2024-04-15 20:53:33][SGP_Logout 58] SGP_Logout out  
+[2024-04-15 20:53:33][SGP_UnInitDevice 23] SGP_UnInitDevice in  
+[2024-04-15 20:53:34][SGP_UnInitDevice 30] SGP_UnInitDevice out  
+[2024-04-15 20:53:44][SGP_InitDevice 17] SGP_InitDevice out  
+[2024-04-15 20:53:44][SGP_Login 35] SGP_Login in  
+[2024-04-15 20:53:44][start 973] SGP_Login WsClient start   80  
+[2024-04-15 20:53:44][threadHandleControl 1193] threadHandleControl login start  
+[2024-04-15 20:53:44][login 670] send login  
+[2024-04-15 20:53:44][processControl 1235] processControl start  
+[2024-04-15 20:53:44][recv_message 149] login success retcode =  0  , token =  48203da61de711b2b9bb1efd6442181a  
+[2024-04-15 20:53:44][SGP_Login 43] SGP_Login out  
+[2024-04-15 20:53:44][SGP_GetGeneralInfo 64] SGP_GetGeneralInfo in  
+[2024-04-15 20:53:44][processHeartbeat 373] processHeartbeat start  
+[2024-04-15 20:53:45][SGP_GetGeneralInfo 72] SGP_GetGeneralInfo out  
